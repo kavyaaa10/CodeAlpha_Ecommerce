@@ -4,6 +4,8 @@ const bcrypt = require("bcryptjs");
 // Register User
 const registerUser = async (req, res) => {
   try {
+    console.log("Headers:", req.headers);
+    console.log("Body:", req.body)
     const { name, email, phone, password, confirmPassword } = req.body;
 
     // Check all fields
