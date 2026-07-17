@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | E-Shop</title>
+
+    <link rel="stylesheet" href="css/checkout.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <h2>E-Shop</h2>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="profile.html">Profile</a>
+    </div>
+</header>
+
+<div class="checkout-container">
+
+    <!-- Left -->
+
+    <div class="checkout-left">
+
+        <h2>Shipping Details</h2>
+
+        <form id="checkoutForm">
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input
+                    type="text"
+                    id="fullName"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label>Mobile Number</label>
+                <input
+                    type="tel"
+                    id="mobile"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label>Address</label>
+                <textarea
+                    id="address"
+                    rows="4"
+                    required
+                ></textarea>
+            </div>
+
+            <div class="row">
+
+                <div class="input-group">
+                    <label>City</label>
+                    <input
+                        type="text"
+                        id="city"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label>State</label>
+                    <input
+                        type="text"
+                        id="state"
+                        required
+                    >
+                </div>
+
+            </div>
+
+            <div class="input-group">
+                <label>Pincode</label>
+                <input
+                    type="text"
+                    id="pincode"
+                    required
+                >
+            </div>
+
+            <h3>Payment Method</h3>
+
+            <div class="payment-method">
+
+                <label>
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="Cash on Delivery"
+                        checked
+                    >
+                    Cash on Delivery
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="UPI"
+                    >
+                    UPI
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="Card"
+                    >
+                    Credit / Debit Card
+                </label>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- Right -->
+
+    <div class="checkout-right">
+
+        <h2>Order Summary</h2>
+
+        <div id="orderItems">
+
+            <!-- JS will load items -->
+
+        </div>
+
+        <hr>
+
+        <div class="summary">
+
+            <div>
+                <span>Subtotal</span>
+                <span id="subtotal">₹0</span>
+            </div>
+
+            <div>
+                <span>Shipping</span>
+                <span>FREE</span>
+            </div>
+
+            <div class="total">
+                <span>Total</span>
+                <span id="total">₹0</span>
+            </div>
+
+        </div>
+
+        <button id="placeOrderBtn">
+            Place Order
+        </button>
+
+    </div>
+
+</div>
+
+<script src="js/checkout.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart</title>
+
+    <link rel="stylesheet" href="css/cart.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>
+            <i class="fa-solid fa-cart-shopping"></i>
+            My Cart
+        </h1>
+
+        <a href="index.html" class="continue">
+            ← Continue Shopping
+        </a>
+
+    </header>
+
+    <main class="cart-page">
+
+        <!-- Left Side -->
+
+        <section class="cart-items">
+
+            <div id="cartContainer"></div>
+
+        </section>
+
+        <!-- Right Side -->
+
+        <aside class="summary">
+
+            <h2>Order Summary</h2>
+
+            <hr>
+
+            <div class="row">
+
+                <span>Total Items</span>
+
+                <span id="totalItems">0</span>
+
+            </div>
+
+            <div class="row">
+
+                <span>Total Price</span>
+
+                <span>₹<span id="totalPrice">0</span></span>
+
+            </div>
+
+            <hr>
+
+            <button id="checkoutBtn">
+
+                Proceed To Checkout
+
+            </button>
+
+        </aside>
+
+    </main>
+
+    <script src="js/cart.js"></script>
+
+</body>
+
+</html>

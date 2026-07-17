@@ -1,18 +1,19 @@
-const productContainer = document.getElementById("productContainer");
+const homeProductContainer = document.getElementById("homeProductContainer");
 
-async function loadProducts(){
+async function loadHomeProducts() {
 
-    try{
+    try {
 
         const response = await fetch("http://localhost:5000/api/products");
 
         const data = await response.json();
 
-        productContainer.innerHTML="";
+        homeProductContainer.innerHTML = "";
 
-        data.products.forEach(product=>{
+        // Show only first 4 products
+        data.products.slice(0, 4).forEach(product => {
 
-            productContainer.innerHTML += `
+            homeProductContainer.innerHTML += `
 
                 <div class="card">
 
@@ -27,8 +28,8 @@ async function loadProducts(){
                         <div class="price">₹${product.price}</div>
 
                         <a href="product.html?id=${product._id}">
-    <button>View Product</button>
-</a>
+                            <button>View Product</button>
+                        </a>
 
                     </div>
 
@@ -38,16 +39,12 @@ async function loadProducts(){
 
         });
 
-    }
-
-    catch(error){
+    } catch (error) {
 
         console.log(error);
-
-        alert("Unable to load products");
 
     }
 
 }
 
-loadProducts();
+loadHomeProducts();
