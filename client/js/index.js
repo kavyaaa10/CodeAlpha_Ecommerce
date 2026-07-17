@@ -10,26 +10,62 @@ async function loadHomeProducts() {
 
         homeProductContainer.innerHTML = "";
 
-        // Show only first 4 products
         data.products.slice(0, 4).forEach(product => {
 
             homeProductContainer.innerHTML += `
 
-                <div class="card">
+                <div class="product-card">
 
-                    <img src="${product.image}" alt="${product.name}">
+                    <div class="wishlist">
+                        <i class="bi bi-heart"></i>
+                    </div>
 
-                    <div class="card-body">
+                    <span class="product-badge">
+                        New
+                    </span>
+
+                    <img
+                        src="${product.image}"
+                        alt="${product.name}">
+
+                    <div class="product-content">
 
                         <h3>${product.name}</h3>
 
                         <p>${product.description}</p>
 
-                        <div class="price">₹${product.price}</div>
+                        <div class="rating">
 
-                        <a href="product.html?id=${product._id}">
-                            <button>View Product</button>
-                        </a>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+
+                        </div>
+
+                        <div class="price">
+
+                            ₹${product.price}
+
+                        </div>
+
+                        <div class="product-actions">
+
+                            <a
+                                href="product.html?id=${product._id}"
+                                style="flex:1;text-decoration:none;">
+
+                                <button
+                                    class="buy-btn w-100">
+
+                                    View Product
+
+                                </button>
+
+                            </a>
+
+                        </div>
 
                     </div>
 
